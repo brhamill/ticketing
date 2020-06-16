@@ -27,14 +27,14 @@ build:
         manual:
           - src: '**/*.js'
             dest: .
-    # - image: us.gcr.io/seraphic-vertex-279215/tickets
-    #   context: tickets
-    #   docker:
-    #     dockerfile: Dockerfile
-    #   sync:
-    #     manual:
-    #       - src: 'src/**/*.ts'
-    #         dest: .
+    - image: us.gcr.io/seraphic-vertex-279215/tickets
+      context: tickets
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.ts'
+            dest: .
     # - image: us.gcr.io/seraphic-vertex-279215/orders
     #   context: orders
     #   docker:
