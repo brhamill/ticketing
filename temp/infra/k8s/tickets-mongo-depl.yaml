@@ -1,35 +1,35 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: auth-mongo-depl
+  name: tickets-mongo-depl
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: auth-mongo
+      app: tickets-mongo
   template:
     metadata:
       labels:
-        app: auth-mongo
+        app: tickets-mongo
     spec:
       containers:
-        - name: auth-mongo
+        - name: tickets-mongo
           image: mongo
           volumeMounts:
-            - name: auth-mongo-persistent-storage
+            - name: tickets-mongo-persistent-storage
               mountPath: /data/db
       volumes:
-        - name: auth-mongo-persistent-storage
+        - name: tickets-mongo-persistent-storage
           persistentVolumeClaim:
-            claimName: auth-mongo-pvc
+            claimName: tickets-mongo-pvc
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: auth-mongo-srv
+  name: tickets-mongo-srv
 spec:
   selector:
-    app: auth-mongo
+    app: tickets-mongo
   ports:
     - name: db
       protocol: TCP
