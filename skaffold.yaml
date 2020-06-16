@@ -43,14 +43,14 @@ build:
         manual:
           - src: 'src/**/*.ts'
             dest: .
-    # - image: us.gcr.io/seraphic-vertex-279215/expiration
-    #   context: expiration
-    #   docker:
-    #     dockerfile: Dockerfile
-    #   sync:
-    #     manual:
-    #       - src: 'src/**/*.ts'
-    #         dest: .
+    - image: us.gcr.io/seraphic-vertex-279215/expiration
+      context: expiration
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.ts'
+            dest: .
     # - image: us.gcr.io/seraphic-vertex-279215/payments
     #   context: payments
     #   docker:
