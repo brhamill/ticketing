@@ -51,11 +51,11 @@ build:
         manual:
           - src: 'src/**/*.ts'
             dest: .
-    # - image: us.gcr.io/seraphic-vertex-279215/payments
-    #   context: payments
-    #   docker:
-    #     dockerfile: Dockerfile
-    #   sync:
-    #     manual:
-    #       - src: 'src/**/*.ts'
-    #         dest: .
+    - image: us.gcr.io/seraphic-vertex-279215/payments
+      context: payments
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.ts'
+            dest: .
